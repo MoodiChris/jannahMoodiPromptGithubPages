@@ -2,11 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
             name="description"
-            content="Jannah - Islamic Habit Tracker for Sunni Muslims. Track prayers, Quran reading, fasting, and build spiritual habits."
+            content="Jannah - Islamic Habit Tracker for Sunni Muslims. Choose your version to access the app."
         />
         <meta
             name="keywords"
@@ -14,11 +13,197 @@
         />
         <meta name="author" content="Jannah App" />
         <meta name="theme-color" content="#008B8B" />
-        <title>جنة Jannah - Islamic Habit Tracker</title>
-      <script type="module" crossorigin src="./assets/index-DYT85JjF.js"></script>
-      <link rel="stylesheet" crossorigin href="./assets/index-DwPdT2nM.css">
+        <title>جنة Jannah - Islamic Habit Tracker - Version Selection</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #333;
+            }
+
+            .container {
+                background: white;
+                border-radius: 20px;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+                padding: 3rem 2rem;
+                max-width: 500px;
+                width: 90%;
+                text-align: center;
+            }
+
+            .logo {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+                color: #008B8B;
+            }
+
+            .title {
+                font-size: 2rem;
+                margin-bottom: 0.5rem;
+                color: #2c3e50;
+                font-weight: 600;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+                color: #7f8c8d;
+                margin-bottom: 2rem;
+                line-height: 1.6;
+            }
+
+            .version-list {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .version-card {
+                background: #f8f9fa;
+                border: 2px solid #e9ecef;
+                border-radius: 15px;
+                padding: 1.5rem;
+                text-decoration: none;
+                color: inherit;
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .version-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba(0, 139, 139, 0.2);
+                border-color: #008B8B;
+            }
+
+            .version-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(0, 139, 139, 0.1), transparent);
+                transition: left 0.5s ease;
+            }
+
+            .version-card:hover::before {
+                left: 100%;
+            }
+
+            .version-number {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: #008B8B;
+                margin-bottom: 0.5rem;
+            }
+
+            .version-description {
+                font-size: 1rem;
+                color: #6c757d;
+                margin-bottom: 1rem;
+            }
+
+            .launch-btn {
+                background: linear-gradient(45deg, #008B8B, #20b2aa);
+                color: white;
+                border: none;
+                padding: 0.8rem 2rem;
+                border-radius: 25px;
+                font-size: 1rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            .launch-btn:hover {
+                transform: scale(1.05);
+                box-shadow: 0 5px 15px rgba(0, 139, 139, 0.3);
+            }
+
+            .footer {
+                margin-top: 2rem;
+                padding-top: 2rem;
+                border-top: 1px solid #e9ecef;
+                color: #6c757d;
+                font-size: 0.9rem;
+            }
+
+            .latest-badge {
+                background: #28a745;
+                color: white;
+                padding: 0.3rem 0.8rem;
+                border-radius: 20px;
+                font-size: 0.8rem;
+                font-weight: 600;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            @media (max-width: 480px) {
+                .container {
+                    padding: 2rem 1.5rem;
+                }
+
+                .title {
+                    font-size: 1.5rem;
+                }
+
+                .subtitle {
+                    font-size: 1rem;
+                }
+
+                .version-number {
+                    font-size: 1.3rem;
+                }
+            }
+        </style>
     </head>
     <body>
-        <div id="root"></div>
+        <div class="container">
+            <div class="logo">🕌</div>
+            <h1 class="title">جنة Jannah</h1>
+            <p class="subtitle">
+                Islamic Habit Tracker for Sunni Muslims<br>
+                Choose your version to get started
+            </p>
+
+            <div class="version-list">
+                <a href="./v0.0.1/" class="version-card">
+                    <div class="latest-badge">Latest</div>
+                    <div class="version-number">v0.0.1</div>
+                    <div class="version-description">
+                        Latest version with improved features and bug fixes
+                    </div>
+                    <button class="launch-btn">Launch App</button>
+                </a>
+
+                <a href="./v0.0.0/" class="version-card">
+                    <div class="version-number">v0.0.0</div>
+                    <div class="version-description">
+                        Initial release version
+                    </div>
+                    <button class="launch-btn">Launch App</button>
+                </a>
+            </div>
+
+            <div class="footer">
+                <p>Track your prayers, Quran reading, fasting, and spiritual habits</p>
+            </div>
+        </div>
     </body>
 </html>
