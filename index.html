@@ -22,7 +22,7 @@
             }
 
             body {
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
                 background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
                 min-height: 100vh;
                 display: flex;
@@ -44,7 +44,7 @@
             .logo {
                 font-size: 3rem;
                 margin-bottom: 1rem;
-                color: #008B8B;
+                color: #008b8b;
             }
 
             .title {
@@ -82,17 +82,22 @@
             .version-card:hover {
                 transform: translateY(-5px);
                 box-shadow: 0 10px 25px rgba(0, 139, 139, 0.2);
-                border-color: #008B8B;
+                border-color: #008b8b;
             }
 
             .version-card::before {
-                content: '';
+                content: "";
                 position: absolute;
                 top: 0;
                 left: -100%;
                 width: 100%;
                 height: 100%;
-                background: linear-gradient(90deg, transparent, rgba(0, 139, 139, 0.1), transparent);
+                background: linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(0, 139, 139, 0.1),
+                    transparent
+                );
                 transition: left 0.5s ease;
             }
 
@@ -103,7 +108,7 @@
             .version-number {
                 font-size: 1.5rem;
                 font-weight: 700;
-                color: #008B8B;
+                color: #008b8b;
                 margin-bottom: 0.5rem;
             }
 
@@ -114,7 +119,7 @@
             }
 
             .launch-btn {
-                background: linear-gradient(45deg, #008B8B, #20b2aa);
+                background: linear-gradient(45deg, #008b8b, #20b2aa);
                 color: white;
                 border: none;
                 padding: 0.8rem 2rem;
@@ -178,16 +183,24 @@
             <div class="logo">🕌</div>
             <h1 class="title">جنة Jannah</h1>
             <p class="subtitle">
-                Islamic Habit Tracker for Sunni Muslims<br>
+                Islamic Habit Tracker for Sunni Muslims<br />
                 Choose your version to get started
             </p>
 
             <div class="version-list">
-                <a href="./v0.0.1/" class="version-card">
+                <a href="./v0.0.3/" class="version-card">
                     <div class="latest-badge">Latest</div>
+                    <div class="version-number">v0.0.3</div>
+                    <div class="version-description">
+                        Latest version with PWA support and enhanced features
+                    </div>
+                    <button class="launch-btn">Launch App</button>
+                </a>
+
+                <a href="./v0.0.1/" class="version-card">
                     <div class="version-number">v0.0.1</div>
                     <div class="version-description">
-                        Latest version with improved features and bug fixes
+                        Previous version with improved features and bug fixes
                     </div>
                     <button class="launch-btn">Launch App</button>
                 </a>
@@ -202,7 +215,10 @@
             </div>
 
             <div class="footer">
-                <p>Track your prayers, Quran reading, fasting, and spiritual habits</p>
+                <p>
+                    Track your prayers, Quran reading, fasting, and spiritual
+                    habits
+                </p>
             </div>
         </div>
     </body>
